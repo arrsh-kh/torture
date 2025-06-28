@@ -8,7 +8,7 @@ Tensor tensor_alloc(int n, int c, int h, int w) {
     t.h = h;
     t.w = w;
     int size = n * c * h * w;
-    t.data = (float*)calloc(size, sizeof(float)); // zero-init
+    t.data = (float*)calloc(size, sizeof(float)); // zero-init 
     return t;
 }
 
