@@ -1,0 +1,11 @@
+#pragma once
+
+typedef struct {
+    float* data;
+    int n, c, h, w;
+} Tensor;
+
+Tensor tensor_alloc(int n, int c, int h, int w);
+void tensor_free(Tensor t);
+
+#define IDX4(n, c, h, w, C, H, W) (((n)*(C)*(H)*(W)) + (c)*(H)*(W) + (h)*(W) + (w))
