@@ -85,7 +85,8 @@ int main() {
             for (int i = 0; i < 2; i++) grad_in->data[i] = grad.data[i];
 
             for (int l = NUM_LAYERS - 1; l >= 0; l--) {
-                Tensor* grad_out = tensor_alloc_ptr_like(&outputs[l]);  // ✅ Now it's a pointer
+                Tensor* grad_out = malloc(sizeof(Tensor));
+                *grad_out = tensor_alloc_like(&outputs[l]);
                 model[l].backward(&model[l], grad_in, grad_out);
                 tensor_free(*grad_in);
                 free(grad_in);
