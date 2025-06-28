@@ -8,4 +8,4 @@ void conv2d_forward(
     Tensor* output,
     int stride,
     int padding
-);
+); 
