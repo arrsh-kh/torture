@@ -1,11 +1,5 @@
 #pragma once
 #include "tensor.h"
-
-void conv2d_forward(
-    Tensor* input,
-    Tensor* weights,
-    Tensor* bias,
-    Tensor* output,
-    int stride,
-    int padding
-); 
+#include "layer.h"
+void conv2d_forward_layer(Layer* layer, Tensor* input, Tensor* output);
+void conv2d_backward_layer(Layer* layer, Tensor* d_out, Tensor* d_input);

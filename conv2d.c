@@ -51,3 +51,11 @@ void conv2d_forward(
         }
     }
 }
+
+void conv2d_forward_layer(Layer* layer, Tensor* input, Tensor* output) {
+    conv2d_forward(input, layer->weights, layer->bias, output, layer->stride, layer->padding);
+}
+
+void conv2d_backward_layer(Layer* layer, Tensor* d_out, Tensor* d_input) {
+    // stub for now
+}
