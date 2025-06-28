@@ -1,4 +1,4 @@
-// gore ahead proceed with caution
+// gore ahead proceed with caution 
 #include "conv2d.h"
 #include "tensor.h"
 
