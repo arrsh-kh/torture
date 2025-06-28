@@ -20,10 +20,10 @@ void tensor_free(Tensor t) {
 int main() {
     Tensor t = tensor_alloc(1, 3, 4, 4);
 
-    int i = IDX4(0, 1, 2, 3, t.c, t.h, t.w);
+    int i = IDX4(0, 1, 2, 3, t.c, t.h, t.w); //tensor location calculation
     t.data[i] = 42.0f;
 
-    printf("Value: %f\n", t.data[i]); // should print 42.0
+    printf("Value: %f\n", t.data[i]); 
 
     tensor_free(t);
     return 0;
