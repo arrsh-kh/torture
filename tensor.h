@@ -8,4 +8,4 @@ typedef struct {
 Tensor tensor_alloc(int n, int c, int h, int w);
 void tensor_free(Tensor t);
 
-#define IDX4(n, c, h, w, C, H, W) (((n)*(C)*(H)*(W)) + (c)*(H)*(W) + (h)*(W) + (w))
+#define IDX4(n, c, h, w, C, H, W) (((n)*(C)*(H)*(W)) + (c)*(H)*(W) + (h)*(W) + (w)) //calculates tensor location
