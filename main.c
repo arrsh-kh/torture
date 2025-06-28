@@ -3,7 +3,7 @@
 #include "tensor.h"
 
 int main() {
-    // Input: 1×1×4×4
+    // Input: 1×1×4×4 
     Tensor input = tensor_alloc(1, 1, 4, 4);
     for (int i = 0; i < 16; i++) {
         input.data[i] = i + 1; // Fill with 1 to 16
